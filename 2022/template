@@ -1,0 +1,31 @@
+using System;
+using System.IO;
+using System.Collections.Generic;
+
+namespace _X
+{
+    class Program
+    {
+        List<string> input = new List<string>();
+        static void Main(string[] args)
+        {
+            Program program = new Program();
+            program.InitializeInput();
+        }
+
+        void InitializeInput()
+        {
+            var lines = File.ReadLines("./input");
+            foreach (string line in lines)
+            {
+                input.Add(line);
+            }
+        }
+
+        using (System.IO.StreamWriter file =
+        new System.IO.StreamWriter("./output", true))
+        {
+            file.WriteLine(line);
+        }
+    }
+}
